@@ -1,9 +1,9 @@
 # 一元二次方程式，ax^2 + bx + c = 0，輸入a, b, c, 求 方程式的兩個實根。
 
 
-a = int(input("請輸入a ： "))
-b = int(input("請輸入b ： "))
-c = int(input("請輸入c ： "))
+a = int(input("請輸入a : "))
+b = int(input("請輸入b : "))
+c = int(input("請輸入c : "))
 
 
 # 判別式

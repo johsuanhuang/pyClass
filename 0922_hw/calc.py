@@ -7,8 +7,8 @@
 # 第三行輸出Product:num1*num2
 # 第四行輸出Quotient:num1/num2
 
-input1 = float(input("請輸入num1 ： "))
-input2 = float(input("請輸入num2 ： "))
+input1 = float(input("請輸入num1 : "))
+input2 = float(input("請輸入num2 : "))
 
 
 def sum(num1, num2):

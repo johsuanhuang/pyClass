@@ -14,8 +14,8 @@
 
 
 import math
-input1 = float(input("請輸入身高幾公尺 ： "))
-input2 = int(input("請輸入體重幾公斤 ： "))
+input1 = float(input("請輸入身高幾公尺 : "))
+input2 = int(input("請輸入體重幾公斤 : "))
 
 bmi = input2 / (input1 ** 2)
 
