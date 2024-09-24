@@ -40,11 +40,12 @@ def getTriangle(a, b, c) :
     arr = [a,b,c]
     if(isTriangle(arr)) :
         if(arr[0] == arr[1] and arr[0] == arr[2]): print('equilateral triangle')
-        for  i  in range(len(a)):
+        for  i  in range(len(arr)):
+
             print('other traigle calc  ')
-            # current = a[i]
-            # other_index = range(len(a)).pop(i)
-            # print("current", current, 'other_index', other_index)
+            current = arr[i]
+            other_index = arr
+            print("current", current, 'other_index', other_index)
 
                 
 
