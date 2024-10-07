@@ -33,22 +33,24 @@ def isTriangle(a):
         else :
             current = a[i]
             other_sum = sum(a) - current
-            if(current >other_sum) : flag = False
+            if(current >=other_sum) : flag = False
     return flag
 
 def getTriangle(a, b, c) : 
     arr = [a,b,c]
     if(isTriangle(arr)) :
-        if(arr[0] == arr[1] and arr[0] == arr[2]): print('equilateral triangle')
-        for  i  in range(len(arr)):
-
-            print('other traigle calc  ')
-            current = arr[i]
-            other_index = arr
-            print("current", current, 'other_index', other_index)
-
-                
-
+        sorted_arr = sorted(arr)
+        if(sorted_arr[0] == sorted_arr[1] == sorted_arr[2]) : 
+            print('正三角形')
+        elif(sorted_arr[0] == sorted_arr[1] or sorted_arr[1] == sorted_arr[2]) :
+            print('等腰三角形')
+        elif(sorted_arr[2]**2 == sorted_arr[0]**2 + sorted_arr[1]**2) :
+            print('直角三角形')
+        elif(sorted_arr[2]**2 > sorted_arr[0]**2 + sorted_arr[1]*2):
+            print('鈍角三角形')
+        elif(sorted_arr[2]**2 < sorted_arr[0]**2 + sorted_arr[1]*2):
+            print('銳角三角形')
+        Í
     else : 
         print('not a triangle')
 

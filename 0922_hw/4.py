@@ -12,22 +12,28 @@
 # 保留位數的後一位如果是5，要根據應看尾數「5」的前一位決定是捨去還是進入，如果是奇數則進位，
 # 如果是偶數則捨去。例如5.215保留兩位小數為5.22，而 5.225保留兩位小數為5.22。
 
-
 import math
-# input1 = float(input(""))
-# input2 = float(input(""))
+input1 = float(input(""))
+input2 = int(input(""))
 
-# bmi = input2 / (input1 ** 2)
+bmi = input2 / (input1 ** 2)
+tBmi = bmi * 1000
+temp_int = int(tBmi + 0.000001) 
 
-bmi = 18.740
-# print(bmi)
-# 取此數小數點後第二個數字
-flag = int(str(bmi).split('.')[1][1])
-print(flag)
-if(flag) :
-    if(flag%2 == 0):
-        print(format( math.floor(bmi*100)/100.0, '.2f'))
-    else:
-        print(format( math.ceil(bmi*100)/100.0, '.2f'))
+second = (temp_int // 10) % 10  # 2
+third = temp_int % 10  # 3
+
+# # print(bmi)
+ans = float(0)
+
+if(third > 5 ):
+    ans = math.ceil(bmi*100)/100.0
+elif(third < 5):
+    ans = math.floor(bmi*100)/100.0
 else:
-    print(format( math.floor(bmi*100)/100.0, '.2f'))
+    if(second % 2 == 0):
+        ans = math.floor(bmi*100)/100.0
+    else:
+        ans = math.ceil(bmi*100)/100.0
+
+print(format(ans, '.2f'))
