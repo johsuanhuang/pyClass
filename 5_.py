@@ -24,7 +24,7 @@
 # a² > b² + c² → 鈍角三角形
 # a² < b² + c² → 銳角三角形
 
-a,b,c = int(input('輸入第一個整數邊長 : ')), int(input('輸入第二個整數邊長 : ')) , int(input('輸入第三個整數邊長 : '))
+a,b,c = int(input('')), int(input('')) , int(input(''))
 
 def isTriangle(a):
     flag = True
@@ -41,16 +41,15 @@ def getTriangle(a, b, c) :
     if(isTriangle(arr)) :
         sorted_arr = sorted(arr)
         if(sorted_arr[0] == sorted_arr[1] == sorted_arr[2]) : 
-            print('正三角形')
+            print('equilateral triangle')
         elif(sorted_arr[0] == sorted_arr[1] or sorted_arr[1] == sorted_arr[2]) :
-            print('等腰三角形')
+            print('isosceles triangle')
         elif(sorted_arr[2]**2 == sorted_arr[0]**2 + sorted_arr[1]**2) :
-            print('直角三角形')
-        elif(sorted_arr[2]**2 > sorted_arr[0]**2 + sorted_arr[1]*2):
-            print('鈍角三角形')
-        elif(sorted_arr[2]**2 < sorted_arr[0]**2 + sorted_arr[1]*2):
-            print('銳角三角形')
-        Í
+            print('right triangle')
+        elif(sorted_arr[2]**2 > sorted_arr[0]**2 + sorted_arr[1]**2):
+            print('obtuse triangle')
+        elif(sorted_arr[2]**2 < sorted_arr[0]**2 + sorted_arr[1]**2):
+            print('acute triangle')
     else : 
         print('not a triangle')
 

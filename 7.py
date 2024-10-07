@@ -28,12 +28,18 @@
 
 
 
-in_sec = int(input('輸入每月網內通話時間(秒) : '))
-out_sec = int(input('輸入每月網外通話時間(秒) : '))
-city_sec = int(input('輸入每月市話通話時間(秒) : '))
-in_sms = int(input('輸入每月網內簡訊則數 : '))
-out_sms = int(input('輸入每月網外簡訊則數 : '))
-net_traffic = int(input('輸入網路流量(GB) : '))
+# in_sec = int(input('輸入每月網內通話時間(秒) : '))
+# out_sec = int(input('輸入每月網外通話時間(秒) : '))
+# city_sec = int(input('輸入每月市話通話時間(秒) : '))
+# in_sms = int(input('輸入每月網內簡訊則數 : '))
+# out_sms = int(input('輸入每月網外簡訊則數 : '))
+# net_traffic = int(input('輸入網路流量(GB) : '))
+in_sec = int(input(''))
+out_sec = int(input(''))
+city_sec = int(input(''))
+in_sms = int(input(''))
+out_sms = int(input(''))
+net_traffic = int(input(''))
 
 pay_plan = [183, 383, 983, 1283]
 
@@ -53,7 +59,7 @@ total = 0
 # 初始化最佳資費
 best_plan = 0
 best_cost = 0
-first = True  # 加入一個旗標來處理第一次比較
+first = True  # 加入flag來處理第一次比較
 
 for i in pay_plan:
     total = 0
@@ -72,11 +78,7 @@ for i in pay_plan:
     # 如果通信費用總和超過月租費，則通信費即為總費用，否則為月租費
     total_cost = max(i, total)
 
-    # 更新最小總費用和對應的資費計畫
-    # if total_cost < best_cost:
-    #     best_cost = total_cost
-    #     best_plan = i
-    # print(in_sec * in_sec_rate[i], out_sec * out_sec_rate[i], city_sec * city_sec_rate[i], in_sms * in_sms_rate[i], out_sms * out_sms_rate[i], out_range * net_traffic_rate[i])
+    
     if(out_range > 0):
         total += out_range * net_traffic_rate[i]
 
@@ -90,5 +92,7 @@ for i in pay_plan:
         if total_cost < best_cost:
             best_cost = total_cost
             best_plan = i
+print(round(best_cost))
+print(best_plan)
 
-print(f"最佳資費為: {best_plan}元，總費用為: {best_cost}元")
+# print(f"最佳資費為: {best_plan}元，總費用為: {best_cost}元")
