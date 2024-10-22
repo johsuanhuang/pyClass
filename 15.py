@@ -38,3 +38,80 @@
 # 1.77 84.5 #第2個人，身高=1.77公尺，體重=84.5公斤
 # 1.75 62.3 #第3個人，身高=1.75公尺，體重=62.3公斤
 # 1.56 48.5 #第4個人，身高=1.56公尺，體重=48.5公斤
+
+import math
+
+total_people = int(input())
+bmi_list = []
+
+for i in range(total_people):
+    height, weight = map(float, input().split())
+    bmi = weight / (height ** 2)
+    
+    # 轉成整數處理（乘以1000取整數，避免精度問題）
+    temp_bmi = int(bmi * 1000)
+    two_num = temp_bmi // 10
+    three_num = temp_bmi % 10
+    
+    # 四捨六入五看偶規則
+    if three_num > 5:  # 大於5要進位
+        two_num += 1
+    elif three_num == 5:  # 等於5看前一位奇偶
+        if two_num % 2 != 0:  # 奇數進位
+            two_num += 1
+    # 小於5不變
+    
+    bmi = two_num / 100
+    bmi_list.append(bmi)
+
+max_bmi = max(bmi_list)
+min_bmi = min(bmi_list)
+
+print(f"{max_bmi:.2f}")
+print(f"{min_bmi:.2f}")
+
+bmi_list.sort()
+
+# 計算中位數
+if len(bmi_list) % 2 == 0:
+    mid1 = bmi_list[len(bmi_list) // 2 - 1]
+    mid2 = bmi_list[len(bmi_list) // 2]
+    center = (mid1 + mid2) / 2
+    
+    # 對中位數進行四捨六入五看偶處理
+    temp_center = int(center * 1000)
+    two_num = temp_center // 10
+    three_num = temp_center % 10
+    
+    if three_num > 5:
+        two_num += 1
+    elif three_num == 5:
+        if two_num % 2 != 0:
+            two_num += 1
+            
+    center = two_num / 100
+else:
+    center = bmi_list[len(bmi_list) // 2]
+
+print(f"{center:.2f}")
+
+# 計算眾數
+frequency = {}
+for i in bmi_list:
+    if i in frequency:
+        frequency[i] += 1
+    else:
+        frequency[i] = 1
+
+mode = None
+max_frequency = 0
+
+for key, value in frequency.items():
+    if value > max_frequency:
+        max_frequency = value
+        mode = key
+    elif value == max_frequency:
+        if key < mode:
+            mode = key
+
+print(f"{mode:.2f}")
