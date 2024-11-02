@@ -5,7 +5,8 @@
 # (2)每局最多有兩次投球機會
 # (3)當局如果第一球將10個保齡球瓶全部擊倒(稱為strike)，當局只有一次投球機會，
 #     此局計分除了10分外，再加上後面兩球擊倒的球瓶數。
-# (4)當局如果第一球未將10個保齡球瓶全部擊倒，但加上第二球則將10個保齡球瓶全部擊倒(稱為spare)，
+# (4)當局如果第一球未將10個保齡球瓶全部擊倒，
+# 但加上第二球則將10個保齡球瓶全部擊倒(稱為spare)，
 #     此局計分除了10分外，再加上後面一球擊倒的球瓶數。
 # (5)當局若兩球都無法將球瓶全部擊倒，此局計分為兩球擊倒的球瓶數。
 # (6)第10局如果第一球將球瓶全部擊倒，後面還有2次投球機會。
@@ -51,7 +52,7 @@ for j in range(10):
         each_score.append(int(input()))
         if each_score[0] == 10:
             hit_score.append(each_score)
-            continue
+            continue #continue 用於跳過本次迴圈中的後續程式碼，直接進入下一次迴圈
         else:
             each_score.append(int(input()))
         hit_score.append(each_score)
@@ -90,3 +91,68 @@ for i in range(10):
 
 # print(hit_score)
 print(score)
+
+
+
+# re write the code
+
+
+# score = 0
+
+# # hit_score = []
+# hit_score = [
+#     [10],         # 第1局 (Strike)
+#     [5, 5],       # 第2局 (Spare)
+#     [10],         # 第3局 (Strike)
+#     [2, 8],       # 第4局 (Spare)
+#     [10],         # 第5局 (Strike)
+#     [4, 6],       # 第6局 (Spare)
+#     [10],         # 第7局 (Strike)
+#     [7, 3],       # 第8局 (Spare)
+#     [10],         # 第9局 (Strike)
+#     [1, 9, 10]    # 第10局 (Spare + 一次額外投球)
+# ]
+
+
+
+# # for i in range(10):
+# #     each_score = []
+# #     if i < 9:
+# #         each_score.append(int(input()))
+# #         if each_score[0] != 10:
+# #             each_score.append(int(input()))
+# #         hit_score.append(each_score)
+# #     else:
+# #         each_score.append(int(input()))
+# #         if each_score[0] == 10:
+# #             each_score.append(int(input()))
+# #             each_score.append(int(input()))
+# #         else:
+# #             each_score.append(int(input()))
+# #             if(sum(each_score) == 10):
+# #                 each_score.append(int(input()))
+# #         hit_score.append(each_score)
+
+
+# total_score = 0
+
+# for i in range(10):
+#     if i < 9:
+#         if hit_score[i][0] ==10:
+#             total_score +=10
+#             if len(hit_score[i+1]) == 2:
+#                 total_score += sum(hit_score[i+1])
+#             else:
+#                 if i + 2 < 10:
+#                     total_score += hit_score[i+1][0] + hit_score[i+2][0]
+#                 else:
+#                     total_score += hit_score[i+1][0] + hit_score[i+1][1]
+#         else:
+#             if sum(hit_score[i]) == 10:
+#                 total_score += 10 + hit_score[i+1][0]
+#             else:
+#                 total_score += sum(hit_score[i])
+#     else:
+#         total_score += sum(hit_score[i])
+
+# print(total_score)

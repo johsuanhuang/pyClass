@@ -33,8 +33,10 @@
 # Q (莊家的 第三張 撲克牌為 Q)
 
 # 範例輸出說明:
-# Y Win (以第一種規則判斷：玩家的總點數為0.5 + 9 + 3 = 12.5，因為玩家總點數超過10.5，所以玩家點數變為0，莊家獲勝)
-# Tie (以第二種規則判斷，莊家的總點數為 6 + 8 + 0.5 = 14.5，因為玩家與莊家總點數都超過10.5，所以玩家與莊家總點數都變為0，平手)
+# Y Win (以第一種規則判斷：玩家的總點數為0.5 + 9 + 3 = 12.5，
+# 因為玩家總點數超過10.5，所以玩家點數變為0，莊家獲勝)
+# Tie (以第二種規則判斷，莊家的總點數為 6 + 8 + 0.5 = 14.5，
+# 因為玩家與莊家總點數都超過10.5，所以玩家與莊家總點數都變為0，平手)
 
 card_values = {
     'A': 0.5,
@@ -108,11 +110,59 @@ print(winner_rule1)
 print(winner_rule2)
 
 
-# C
-# A
-# 6
-# J
-# D
-# 2
-# K
-# 4
+
+# re write the code
+
+# player_name = "C"
+# player_cards = ["10", "9", "8"]
+
+# dealer_name = "D"
+# dealer_cards = ["8", "9", "10"]
+
+# # player_name = input()
+# # player_cards = [input() for i in range(3)]
+
+# # dealer_name = input()
+# # dealer_cards = [input() for i in range(3)]
+
+# card_values = {
+#   'A': 0.5,
+#   '2': 2,
+#   '3': 3,
+#   '4': 4,
+#   '5': 5,
+#   '6': 6,
+#   '7': 7,
+#   '8': 8,
+#   '9': 9,
+#   '10': 10,
+#   'J': 0.5,
+#   'Q': 0.5,
+#   'K': 0.5
+# } 
+
+# player_value = sum([card_values[i] for i in player_cards])
+# dealer_value = sum([card_values[j] for j in dealer_cards])
+
+# if player_value > 10.5:
+#   print(f"{dealer_name} Win")
+# else:
+#   if dealer_value > 10.5:
+#     print(f"{player_name} Win")
+#   elif player_value == dealer_value:
+#     print("Tie")
+#   elif player_value < dealer_value:
+#     print(f"{dealer_name} Win")
+#   elif player_value > dealer_value:
+#     print(f"{player_name} Win")
+
+
+
+# if player_value > 10.5 and dealer_value > 10.5:
+#   print(f"Tie")
+# elif player_value > dealer_value:
+#   print(f"{player_name} Win")
+# elif dealer_value > player_value:
+#   print(f"{dealer_name} Win")
+# else:
+#   print(f"Tie")

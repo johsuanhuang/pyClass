@@ -1,12 +1,14 @@
 # BMI比較
 
-# 給定n個人輸入身高與體重並計算BMI，BMI計算後需先四捨六入五看偶取到小數點第二位，
+# 給定n個人輸入身高與體重並計算BMI，BMI計算後需先四捨六入五看偶
+# 取到小數點第二位，
 # 並以捨入後的結果計算BMI的最大值、最小值、中位數、眾數。
 # ※BMI = 體重(公斤) / (身高*身高)(公尺)
 
 # ※四捨六入五看偶規則
 # 保留位數的後一位如果是5，要根據應看尾數「5」的前一位決定是捨去還是進入，
-# 如果是奇數則進位，如果是偶數則捨去。例如5.215保留兩位小數為5.22，而 5.225保留兩位小數為5.22。
+# 如果是奇數則進位，如果是偶數則捨去。例如5.215保留兩位小數為5.22，
+# 而 5.225保留兩位小數為5.22。
 
 # ※中位數：為一數列經過排序後，處數列中間的數，如：
 # [3,6,8,10,11] 則中位數 = 8
@@ -38,6 +40,7 @@
 # 1.77 84.5 #第2個人，身高=1.77公尺，體重=84.5公斤
 # 1.75 62.3 #第3個人，身高=1.75公尺，體重=62.3公斤
 # 1.56 48.5 #第4個人，身高=1.56公尺，體重=48.5公斤
+
 
 import math
 
@@ -115,3 +118,91 @@ for key, value in frequency.items():
             mode = key
 
 print(f"{mode:.2f}")
+
+
+
+# re write the code
+
+# import math
+
+
+# total_people = int(input())
+
+# bmi_list = []
+
+# if total_people<2 or total_people>10:
+#   print("輸入範圍錯誤")
+#   exit()
+
+# def round_half_even(value):
+#     two_num = int(value * 100 % 10)
+#     three_num = int(value * 1000 % 10)
+#     if three_num == 5:
+#         if two_num % 2 == 0:
+#             return math.floor(value * 100) / 100
+#         else:
+#             return math.ceil(value * 100) / 100
+#     else:
+#         if three_num > 5:
+#             return math.ceil(value * 100) / 100
+#         else:
+#             return math.floor(value * 100) / 100
+
+# for i in range(total_people):
+#   tt = input().split()
+#   hh = float(tt[0])
+#   ww = float(tt[1])
+#   bmi = ww/ hh**2
+
+#   two_num = int(bmi * 100 % 10)
+#   three_num = int(bmi * 1000 % 10)
+#   bmi = round_half_even(bmi)
+#   bmi_list.append(bmi)
+
+# max_bmi = max(bmi_list)
+# min_bmi = min(bmi_list)
+
+# print('%.2f' %max_bmi)
+# print('%.2f' %min_bmi)
+
+# bmi_list.sort()
+
+# # print(bmi_list)
+
+
+
+# mid_num = 0
+
+# if len(bmi_list) % 2 == 0:
+#   mid_count = len(bmi_list) // 2
+#   mid_num = (bmi_list[mid_count] + bmi_list[mid_count-1]) / 2
+#   mid_num = round_half_even(mid_num)
+# else:
+#   mid_count = len(bmi_list) // 2
+#   mid_num = bmi_list[mid_count]
+
+# print('%.2f' %mid_num)
+
+
+# count_num = {}
+
+# for i in bmi_list:
+#   if i in count_num:
+#     count_num[i] += 1
+#   else:
+#     count_num[i] = 1
+
+
+# max_count = 0
+# mode = None
+
+# for key, value in count_num.items():
+#   if value > max_count: 
+#     max_count = value
+#     mode = key
+#   else:
+#     if value == max_count:
+#       if key < mode:
+#         mode = key
+
+# print('%.2f' %mode)

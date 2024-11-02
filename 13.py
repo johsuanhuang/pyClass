@@ -66,3 +66,36 @@ for i in range(len(final_list)):
 
 # print(final_list) 
 print(total_long)
+
+
+
+
+# re write the code
+
+# total_line = int(input())
+
+# # line_list = [[-7, -1], [-2, 3], [1, 9], [-10, 10]]
+# line_list = []
+
+# for i in range(total_line):
+#     line = input().split()
+#     line = [int(i) for i in line]
+#     line.sort()
+#     line_list.append(line)
+
+# line_list.sort()
+
+# for i in range(len(line_list)):
+#   for kk in range(i+1, len(line_list)):
+#     if line_list[i][1] >= line_list[kk][0]:
+#       line_list[i][1] = max(line_list[i][1], line_list[kk][1])
+#       line_list[kk] = [0,0]
+
+# new_list = [tt for tt in line_list if tt !=[0,0]]
+
+# total = 0
+
+# for i in range(len(new_list)):
+#   total += new_list[i][1] - new_list[i][0]
+
+# print(total)

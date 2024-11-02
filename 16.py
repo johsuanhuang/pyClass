@@ -1,8 +1,11 @@
 # 判斷三角形並找最大/最小面積
 
-# 給定n個三角形和其三邊長，輸出該三角形類型，若可構成三角形則再輸出面積。全部輸入完後，再輸出其中最大和最小面積。輸出面積四捨五入取到小數點第二位。
+# 給定n個三角形和其三邊長，輸出該三角形類型，
+# 若可構成三角形則再輸出面積。全部輸入完後，再輸出其中最大和最小面積。
+# 輸出面積四捨五入取到小數點第二位。
 
-# 若輸入的所有三角形皆不是三角形，則不輸出最大與最小面積，改為輸出 All inputs are not triangles!
+# 若輸入的所有三角形皆不是三角形，則不輸出最大與最小面積，
+# 改為輸出 All inputs are not triangles!
 
 # ※三角形面積可利用海龍公式計算(a,b,c表示三角形三邊長)：
 
@@ -14,7 +17,9 @@
 # 5. 銳角三角形:輸出acute triangle。
 # 6. 直角三角形:輸出right triangle。
 
-# 當三個邊長能構成三角形時，判斷該三角形是否為正三角形，若否，則判斷是否為等腰三角形。若皆非正三角形或等腰三角形，再判斷該三角形為鈍角三角形、銳角三角形或直角三角形。
+# 當三個邊長能構成三角形時，判斷該三角形是否為正三角形，若否，
+# 則判斷是否為等腰三角形。若皆非正三角形或等腰三角形，
+# 再判斷該三角形為鈍角三角形、銳角三角形或直角三角形。
 
 # 1. 不能成為三角形：任兩邊和不大於第三邊，或任一邊長不大於0。
 # 2. 正三角形：三個邊相等。
@@ -26,11 +31,13 @@
 # ---------------------------------------------------------------------------------------
 
 # 輸入說明
-# 第1行：輸入一個正整數，表示接下來將輸入n個三角形的三邊長（2<=n<=10）
+# 第1行：輸入一個正整數，
+# 表示接下來將輸入n個三角形的三邊長（2<=n<=10）
 # 第2~n+1行：輸入三個正整數，以空白隔開。表示該三角形的三邊長。
 
 # 輸出說明
-# 第1~n行：輸出三角形類型。若可構成三角形，則再輸出面積(四捨五入取到小數點第二位)
+# 第1~n行：輸出三角形類型。若可構成三角形，
+# 則再輸出面積(四捨五入取到小數點第二位)
 # ，面積為一浮點數。三角形類型與面積以空白隔開。
 
 # 若輸入有任一個可構成三角形，輸出兩行
@@ -128,3 +135,75 @@ if area_list:
     print(format(min_area, '.2f'))
 else:
     print("All inputs are not triangles!")
+
+
+
+# re write the code
+
+# import math
+
+
+# total_triangle = int(input())
+# triangle_list = []
+
+# for i in range(total_triangle):
+#   tt = input().split()
+#   tt = [int(i) for i in tt]
+#   tt.sort()
+#   triangle_list.append(tt)
+
+# # total_triangle = 3
+
+# # triangle_list = [[3,3,7],[1,2,5],[4,4,8]]
+
+# def getT(a,b,c):
+#   arr = [a,b,c]
+#   arr.sort()
+#   # print(arr)
+#   if 0 in arr:
+#     print('not a triangle')
+#     return False
+#   elif (arr[0] + arr[1] <= arr[2]) or (arr[0] +arr[2] <= arr[1]):
+#     print('not a triangle')
+#     return False
+  
+#   if arr[0] == arr[1] == arr[2]:
+#     print('equilateral triangle')
+#     return
+#   elif arr[0] == arr[1] or arr[1] == arr[2]:
+#     print('isosceles triangle')
+#     return
+#   elif arr[2]**2 > arr[0]**2 + arr[1]**2:
+#     print('obtuse triangle')
+#     return
+#   elif arr[2]**2 < arr[0]**2 + arr[1]**2:
+#     print('acute triangle')
+#     return
+#   elif arr[2]**2 == arr[0]**2 + arr[1]**2:
+#     print('right triangle')
+#     return
+
+# area_list = []
+
+
+# for i in range(total_triangle):
+#   a,b,c = triangle_list[i]
+#   getT(a,b,c)
+#   if (0 not in triangle_list[i]) and (triangle_list[i][0] + triangle_list[i][1] > triangle_list[i][2]) and (triangle_list[i][0] +triangle_list[i][2] > triangle_list[i][1]):
+#     s = (a+b+c)/2
+#     area = math.sqrt(s*(s-a)*(s-b)*(s-c))
+#     print(format(area, '.2f'), i)
+#     area_list.append(area)
+#   else:
+#     pass
+
+# # print(area_list)
+
+# if area_list:
+#     max_area = max(area_list)
+#     min_area = min(area_list)
+#     print(format(max_area, '.2f'))
+#     print(format(min_area, '.2f'))
+# else:
+#   print("All inputs are not triangles!")
+  
