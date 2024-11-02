@@ -91,45 +91,58 @@ else:
     print("correct")
 
 
+# re write the code
+
+
+# class_list = {
+#     'Math1011': ['46'],
+#     'Chinese1002': ['45', '46'],
+#     'English1003': ['61', '5a']
+# }
+
+# class_list = {}
+
+
+# for i in range(3):
+#   class_name = input()
+#   class_num = int(input())
+#   class_list[class_name] = []
+
+#   if(class_num < 1 or class_num > 3):
+#     print(-1)
+#     exit()
+
+#   for j in range(class_num):
+#     ttt = input()
+#     if (len(ttt) != 2) or ttt[0] not in ['1', '2', '3', '4', '5'] or ttt[1] not in ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c']:
+#       print(-1)
+#       exit()
+#     class_list[class_name].append(ttt)
 
 
 
 
-# Programming1002
-# 2
-# 3b
-# 4c
-# Biology1003
-# 2
-# 11
-# 3b
-# Math3003
-# 2
-# 11
-# 3b
+# class_name = list(class_list.keys())
+# print(class_list)
+# conflict_list = []
+
+# for i in range(len(class_name)):
+#   # print(i)
+#   for j in range(i+1, len(class_list)):
+#     # print(class_name[i], class_name[j])
+#     for kk in class_list[class_name[i]]:
+#       # print(kk)
+#       for pp in class_list[class_name[j]]:
+#         if kk == pp:
+#           # print(kk, pp)
+#           conflict_list.append([class_name[i], class_name[j], kk])
 
 
-# Physics3000
-# 1
-# 37
-# Biology2004
-# 3
-# 2a
-# 2b
-# 2c
-# Chemistry1003
-# 1
-# 1c
-# print(print_list)
+# if not conflict_list:
+#   print("correct")
+# else:
+#   for i in conflict_list:
+#     print(','.join(i))
 
-# Math1011
-# 1
-# 46
-# Chinese1002
-# 2
-# 45
-# 46
-# English1003
-# 2
-# 61
-# 5a
+
+

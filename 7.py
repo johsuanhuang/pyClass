@@ -20,7 +20,8 @@
 
 # 優惠內容月租費可抵等額通信費 :
 # 若總通信費(包含通話時間、簡訊數量、網路加購)
-# 高於該資費類型的費用，則以原費用進行收費，若低於該資費類型的費用，則以該資費類型的費用進行收費。
+# 高於該資費類型的費用，則以原費用進行收費，若低於該資費類型的費用，
+# 則以該資費類型的費用進行收費。
 
 # 例如:
 # 選擇183型，總通信費為200元，則應繳金額為200元
@@ -79,8 +80,8 @@ for i in pay_plan:
     total_cost = max(i, total)
 
     
-    if(out_range > 0):
-        total += out_range * net_traffic_rate[i]
+    # if(out_range > 0):
+    #     total += out_range * net_traffic_rate[i]
 
     #   另一個寫法
     if first:
@@ -96,3 +97,56 @@ print(round(best_cost))
 print(best_plan)
 
 # print(f"最佳資費為: {best_plan}元，總費用為: {best_cost}元")
+
+
+# re write
+
+# in_sec = 9000
+# out_sec = 9000
+# city_sec = 60
+# in_sms = 200
+# out_sms = 50
+# net_traffic = 3
+
+
+
+
+
+# pay_plan = [183, 383, 983, 1283]
+
+# in_sec_rate = { 183 : 0.08, 383 : 0.07, 983 : 0.06, 1283 : 0.05}
+# out_sec_rate = { 183 : 0.139, 383 : 0.130, 983 : 0.108, 1283 : 0.100}
+# city_sec_rate = { 183 : 0.135, 383 : 0.121, 983 : 0.101, 1283 : 0.090}
+# in_sms_rate = { 183 : 1.128, 383 : 1.128, 983 : 1.128, 1283 : 1.128}
+# out_sms_rate = { 183 : 1.483, 383 : 1.483, 983 : 1.483, 1283 : 1.483}
+# net_traffic_gb = { 183 : 1, 383 : 3, 983 : 5, 1283 : 0}
+# net_add_rate = { 183 : 250, 383 : 200, 983 : 150, 1283 : 0}
+
+# total = 0
+
+# best_plan = 183
+# best_cost = 999999999
+# # first = True
+
+# for i in pay_plan:
+#   # print(i)
+#   total = 0
+#   total += in_sec_rate[i] * in_sec
+#   total += out_sec_rate[i] * out_sec
+#   total += city_sec_rate[i] * city_sec
+#   total += in_sms_rate[i] * in_sms
+#   total += out_sms_rate[i] * out_sms
+
+#   out_range = net_traffic - net_traffic_gb[i]
+#   if out_range > 0:
+#     total += out_range * net_add_rate[i]
+
+
+#   max_cost = max(i, total)
+
+#   if max_cost < best_cost:
+#     best_cost = max_cost
+#     best_plan = i
+
+# print(round(best_cost))
+# print(best_plan)

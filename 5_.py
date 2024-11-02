@@ -55,3 +55,42 @@ def getTriangle(a, b, c) :
 
 
 getTriangle(a,b,c)
+
+
+# re write
+# import math
+
+
+# a, b, c = 3,4,5
+
+
+# def getT(a,b,c):
+#   arr = [a,b,c]
+#   arr.sort()
+#   # print(arr)
+#   if 0 in arr:
+#     print('not a triangle')
+#     return
+#   elif (arr[0] + arr[1] <= arr[2]) or (arr[0] +arr[2] <= arr[1]):
+#     print('not a triangle')
+#     return
+
+#   if arr[0] == arr[1] == arr[2]:
+#     print('equilateral triangle')
+#     return
+#   elif arr[0] == arr[1] or arr[1] == arr[2]:
+#     print('isosceles triangle')
+#     return
+#   elif arr[2]**2 > arr[0]**2 + arr[1]**2:
+#     print('obtuse triangle')
+#     return
+#   elif arr[2]**2 < arr[0]**2 + arr[1]**2:
+#     print('acute triangle')
+#     return
+#   elif arr[2]**2 == arr[0]**2 + arr[1]**2:
+#     print('right triangle')
+#     return
+
+
+
+# getT(a,b,c)

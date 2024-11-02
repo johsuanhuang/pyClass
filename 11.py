@@ -113,6 +113,57 @@ print(total)
 # print(dict_data) 
 
 
-# 6,95,80,75
-# 12,95,80,70
-# 30,90,80,75
+# re write the code
+
+# book_list = ['A', 'B', 'C']
+
+# discount_list = [20, 30, 100]
+
+# book_obj = {
+#     'A': {'count': 12, 'discount': [0.99, 0.89, 0.79], 'price': 380, 'total': 4560},
+#     'B': {'count': 22, 'discount': [0.98, 0.88, 0.78], 'price': 1200, 'total': 26400},
+#     'C': {'count': 34, 'discount': [0.97, 0.87, 0.77], 'price': 180, 'total': 6120}
+# }
+
+# price_list = [380, 1200, 180]
+
+# # for i in book_list:
+# #     tt = input().split(',')
+# #     print(tt)
+# #     book_obj[i] = {}
+# #     book_obj[i]['count'] = int(tt[0])
+# #     book_obj[i]['discount'] = [float(tt[1]) / 100, float(tt[2]) / 100, float(tt[3]) / 100]
+# #     if(i == 'A'):
+# #         book_obj[i]['price'] = 380
+# #     elif(i == 'B'):
+# #         book_obj[i]['price'] = 1200
+# #     else:
+# #         book_obj[i]['price'] = 180
+# #     book_obj[i]['total'] = book_obj[i]['price'] * book_obj[i]['count']
+# #     book_obj[i]['discount_total'] = 0
+
+
+# new_book_list = []
+
+# for key in book_obj:
+#     count = book_obj[key]['count']
+#     price = book_obj[key]['price']
+#     discount = book_obj[key]['discount']
+#     total = book_obj[key]['total']
+#     discount_total = 0
+#     if count <= 10:
+#         discount_total = total 
+#     elif count <= 20:
+#         discount_total = total * discount[0]
+#     elif count <= 30:
+#         discount_total = total * discount[1]
+#     else:
+#         discount_total = total * discount[2]
+#     book_obj[key]['discount_total'] = math.ceil(discount_total)
+#     new_book_list.append([key, book_obj[key]['discount_total']])
+
+# sort_data = sorted(new_book_list, key = lambda x: x[1], reverse = True)
+
+# for i in sort_data:
+#     print(i[0], i[1])
+# print(sum([i[1] for i in sort_data]))

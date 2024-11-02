@@ -37,3 +37,26 @@ else:
         ans = math.ceil(bmi*100)/100.0
 
 print(format(ans, '.2f'))
+
+# re write
+
+# import math
+
+# hh = 1.83
+# ww = 75
+
+
+# bmi = ww / (hh**2)
+
+# two = int(bmi * 100 % 10)
+# three = int( bmi * 1000 % 10)
+
+# print(bmi ,two, three)
+
+# if three == 5 :
+#   if two % 2 == 0:
+#     print(format(math.floor(bmi*100)/100, '.2f'))
+#   else:
+#     print(format(math.ceil(bmi*100)/100, '.2f'))
+# else:
+#   print(format(math.floor(bmi*100)/100, '.2f'))

@@ -71,14 +71,41 @@ for i in range(1, len(line_list)):
 total_length += end_num - start_num
 print(total_length)
 
-# for i in range(len(line_list)):
-#     for j in range(i+1, len(line_list)):
-#         if (line_list[i][0] >= line_list[j][0] and line_list[i][0] <= line_list[j][1]) or (line_list[i][1] >= line_list[j][0] and line_list[i][1] <= line_list[j][1]):
-#             start_num = min(line_list[i][0], line_list[j][0])
-#             end_num = max(line_list[i][1], line_list[j][1])
-#             total_length += end_num - start_num
-#         else:
-#             print('no overlap', line_list[i][1] , line_list[i][0])
-#             # total_length += line_list[i][1] - line_list[i][0]
 
-# print(total_length)
+
+
+
+# re write the code
+
+
+a_x1 = -7
+a_x2 = 4
+b_x1 = -6
+b_x2 = -3
+c_x1 = 1
+c_x2 = 2
+
+
+line_list = [[a_x1, a_x2], [b_x1, b_x2], [c_x1, c_x2]]
+
+line_list.sort()
+
+total_length = 0
+start_num = line_list[0][0]
+end_num = line_list[0][1]
+
+for i in range(len(line_list)):
+    line_list[i].sort()
+    # print(line_list[i])
+    for j in range(i+1, len(line_list)):
+        # print(j)
+        if line_list[i][1] >= line_list[j][0]:
+            end_num = max(end_num, line_list[j][1])
+        else:
+            total_length += end_num - start_num
+            start_num = line_list[j][0]
+            end_num = line_list[j][1]
+
+
+
+print(total_length)

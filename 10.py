@@ -75,4 +75,42 @@ print(score)
     
 
 
+# # re write the code
+
+# hit_num_9 = [3, 1]      # 第九局兩球分數
+# hit_num_10 = [10, 1, 3] # 第十局第一球strike，包含一次額外投球
+
+# # 無額外投球
+
+
+# # for i in range(2):
+# #   hit_num_9.append(int(input()))
+# #   if 10 in hit_num_9:
+# #     break
+
+# # hit_num_10.append(int(input()))
+
+# # if hit_num_10[0] == 10:
+# #     hit_num_10.append(int(input()))
+# #     hit_num_10.append(int(input()))
+# # else:
+# #     hit_num_10.append(int(input()))
+# #     if sum(hit_num_10) == 10:
+# #       hit_num_10.append(int(input()))
+# score = 0
+
+# if hit_num_9[0] == 10:
+#   score +=  hit_num_9[0]
+#   score += (hit_num_10[0] + hit_num_10[1])
+# elif sum(hit_num_9) == 10:
+#   score += (hit_num_9[0] + hit_num_9[1])
+#   score += hit_num_10[0]
+
+# else:
+#   score += sum(hit_num_9)
+
+
+# score += sum(hit_num_10)
+
+# print(score)
 
