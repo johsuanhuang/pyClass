@@ -127,3 +127,75 @@ elif pic_type == 4:
             print('-', end='')
         print()
 
+
+# re write the code
+
+# pic_type = 4
+
+# if pic_type < 1 or pic_type > 4:
+#     print('error')
+#     exit()
+
+# N = 5
+
+# if N % 2 == 0 or N <= 2 or N >= 50:
+#     print('error')
+#     exit()
+
+
+# if pic_type == 1:
+#     # 正三角形
+#     for i in range(1, N+1): # 1 2 3 4 5
+#         for h in range(N - i):
+#             print('#', end='')
+#         for k in range(2 * i -1): # 4 3 2 1 0
+#             print('*', end='')
+#         for h in range(N - i):
+#             print('#', end='')
+#         print()
+
+# elif pic_type == 2:
+#     for i in range( N, 0 , -1): # 1 2 3 4 5
+#         for h in range(N - i ):
+#             print('#', end='')
+#         for k in range(2 * i -1): # 4 3 2 1 0
+#             print('*', end='')
+#         for h in range(N - i ):
+#             print('#', end='')
+#         print()
+
+# elif pic_type == 3:
+#     for i in range(0, N//2+2): # 1 2 3 4 5
+#         for j in range(N//2+1 -i):
+#             print(' ', end='')
+#         for h in range(2 * i -1):
+#             print('*', end='')
+#         print()
+#     for i in range(N//2 , 0 , -1): # 1 2 3 4 5
+#         for j in range(N//2+1 -i):
+#             print(' ', end='')
+#         for h in range(2 * i -1):
+#             print('*', end='')
+#         print()
+
+# elif pic_type == 4:
+#     for i in range(0, N//2+2): # 1 2 3 4 5
+#         for j in range(N//2+1 -i):
+#             print(' ', end='')
+#         for h in range(2 * i -1):
+#             print('*', end='')
+#         for j in range(N//2+1 -i):
+#             print('  ', end='')
+#         for h in range(i , 2 * i -1):
+#             print('=', end='')
+#         print()
+#     for i in range(N//2 , 0 , -1): # 1 2 3 4 5
+#         for j in range(N//2+1 -i):
+#             print(' ', end='')
+#         for h in range(2 * i -1):
+#             print('*', end='')
+#         for j in range(N//2+1 -i):
+#             print('  ', end='')
+#         for h in range(i , 2 * i -1):
+#             print('=', end='')
+#         print()

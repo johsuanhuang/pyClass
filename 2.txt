@@ -1,0 +1,76 @@
+測試資料二】
+輸入:
+3
+Ray 5H AS 9C QC 3DD
+Kate JC KH 9D 6H 9S
+Peter 4C 5D 2S 9D 2C
+輸出:
+Error input
+
+【測試資料三】
+輸入:
+4
+Kevin AD 2C 3C 4D 4D
+Tom 7S 8S 9S 9C 6S
+Andy QH 8D KH 4H JH
+Joe AS 2S 3C 4S 5S
+輸出:
+Duplicate deal
+
+【測試資料四】
+輸入:
+2
+Tony 6H KC 5C 3D MZ
+Maze 5H 5D 5C 6C 5S
+輸出:
+Error input
+
+【隱藏測試資料一】
+輸入:
+4
+Ada JH QH KH AH 2H
+Bob 3S 3H 3D 5H 6H
+Kelly 7S 7H 7C 8D 8C
+John 10S 8S QS 2C KC
+輸出:
+Ada 9
+Kelly 7
+Bob 4
+John 1
+【隱藏測試資料二】
+輸入:
+3
+Ivan 3C 3D 5S 3S 3H
+May 8D 8C 8S KH 7C
+Lion 5H AC 5C 4D AD
+輸出:
+Ivan 8
+May 4
+Lion 3
+【隱藏測試資料三】
+輸入:
+3
+Cindy 8D AC 8S KH 7C
+Linda 5H KC 5C 3D 1D
+Gery 3C 3D 5S 3S 3H
+輸出:
+Error input
+
+【隱藏測試資料四】
+輸入:
+3
+Amy 2C 3C 4C 5C 6C
+Tina 6H 6D 6C 7C 6S
+
+Joe AD 8D 8S 8H 7C
+輸出:
+Duplicate deal
+【隱藏測試資料五】
+輸入:
+4
+Tony 8H LC 5D 3D 2D
+Zoe 9D 8C 8S 9H 7C
+Vivi AC 8S 6H 6D 6C
+Maze 2D 5C 5S 6S 7S
+輸出:
+Error input

@@ -119,3 +119,50 @@ elif pic_type == 3:
           for m in range(1, i):
               print('_', end='')
           print()
+
+
+# re write the code
+
+# pic_type = 3
+
+# if pic_type < 1 or pic_type > 3:
+#     print('error')
+#     exit()
+
+# N = 5
+
+# if  N <= 2 or N >= 50:
+#     print('error')
+#     exit()
+
+# if pic_type == 1:
+#     for i in range(1, N+1):
+#       for j in range(1, i+1):
+#           print(j, end='')
+#       for h in range(i-1, 0 , -1):
+#           print(h, end='')
+#       print()
+
+# elif pic_type == 2:
+#     for i in range(1, N+1):
+#         for g in range(N-i):
+#             print('-', end='')
+#         for u in range(1, i+1):
+#             print(u, end='')
+#         for b in range(i-1, 0, -1):
+#             print(b, end='')
+#         for g in range(N-i):
+#             print('-', end='')
+#         print()
+
+# elif pic_type == 3:
+#     for i in range(1, N+1):
+#         for g in range(i-1):
+#             print('-', end='')
+#         for u in range(1, N-i+2):
+#             print(u, end='')
+#         for b in range(N-i, 0, -1):
+#             print(b, end='')
+#         for g in range(i-1):
+#             print('-', end='')
+#         print()
